@@ -28,3 +28,34 @@ console.log(removeItem(fruits, 3));
 
 console.log(fruits);
 // result should be still: ["Watermelon", "Banana", "Cherry", "Kiwi", "Pineapple", "Apple"]
+
+// TODO: Implement the sumOfCharacters function
+
+/* Es soll eine Funtion geschrieben werden, die einen input-Parameter, nämlich ein array
+hat. Das array soll ausgelesen werden, wobei die einzelnen Einträge daraufhin untersucht 
+werden, ob sie ein String sind oder nicht und wenn ja, soll die Zeichenlänge aller strings
+innerhalb des arrays addiert und ausgegeben werden*/
+
+function sumOfCharacters(inputArray) {
+  let result = 0;
+  for (let index = 0; index < inputArray.length; index++) {
+    if (typeof inputArray[index] === "string") {
+      result = result + inputArray[index].length;
+    }
+  }
+  return console.log(result);
+}
+
+const arr1 = ["Luke", "Anakin", true, "Obi Wan", 333];
+console.log(sumOfCharacters(arr1));
+// result should be: 17
+
+const arr2 = [
+  "Code is",
+  "like humor",
+  ".",
+  "When you have",
+  "to explain it, it's bad!",
+];
+console.log(sumOfCharacters(arr2));
+// result should be: 55
